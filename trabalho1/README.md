@@ -58,9 +58,10 @@ IMP 20
 1, 3, 5, 7, 9
 ```
 
-## Versões:
+## Versões
 
 A estrutura deve começar na versão 0.
 Cada operação de inclusão e remoção aumenta a versão da estrutura em 1.
 Haverá no máximo 99 operações de inclusão e remoção, de modo que haverá no máximo 100 versões diferentes da estrutura, então os identificadores das versões (raiz da estrutura e em quais versões ela opera) podem ser guardados num vetor de tamanho 100.
 Não há limite para o número de operações de sucessor e de impressão, mas estas não criam novas versões.
+Sua estrutura de dados pode criar "versões parciais" para modificações que ocorrem entre versões (uma única inserção pode ocasionar mais de uma modificação na estrutura durante as atualizações, então tenha o cuidado de marcar quais modificações interessam para a entrada).

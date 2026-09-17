@@ -3,7 +3,7 @@
 O objetivo do trabalho é implementar uma estrutura de dados que suporta persistência parcial seguindo o método descrito em sala.
 A sua implementação **não pode** fazer uma cópia inteira da estrutura a cada modificação.
 
-Equipes da graduação devem implementar uma lista encadeada ordenada com persistência parcial.
+Equipes da graduação devem implementar uma lista duplamente encadeada ordenada com persistência parcial.
 Equipes da pós-graduação devem implementar uma árvore binária de busca com persistência parcial (**não** precisa ser auto-balanceável, como as árvores AVL ou rubro-negras).
 
 ## Operações
@@ -12,6 +12,7 @@ As estruturas devem suportar as seguintes operações:
 
 - **Inclusão:** Uma operação de inclusão será identificada por uma linha como ```INC N```.
 Isto significa que um elemento com chave N deve ser incluído na estrutura e uma nova versão criada.
+Se a chave já estiver presente ela deve ser adicionada novamente.
 
 Exemplo de linha de inclusão:
 
@@ -29,6 +30,7 @@ Exemplo de linha de remoção:
 - **Sucessor:** Uma operação de sucessor será identificada por uma linha como ```SUC N M```.
 A linha de entrada deve ser impressa e, em seguida, a chave com menor valor que é estritamente maior que ```N``` na versão ```M``` da estrutura deve ser impressa uma linha abaixo.
 Não é necessário existir um elemento com chave ```N``` na estrutura para que a operação de sucessor seja feita.
+Se não houver nenhum elemento na estrutura com chave estritamente maior que ```N```, o resultado deve ser ```inf```
 Essa operação não deve criar uma nova versão na estrutura.
 
 Exemplo de linha de sucessor:
@@ -45,6 +47,7 @@ SUC 2 20
 - **Imprimir:** Uma operação de impressão será identificada por uma linha como ```IMP M```.
 A linha de entrada deve ser impressa e, em seguida, os elementos da estrutura na versão ```M``` devem ser impressos na linha abaixo em ordem crescente, separados por vírgula e espaço.
 Caso a versão fornecida não exista, a impressão deve ocorrer na versão mais recente.
+Caso a estrutura esteja vazia na versão em questão, o resultado da impressão deve ser uma linha em branco.
 Essa operação não deve criar uma nova versão na estrutura.
 
 Exemplo de linha de impressão:
